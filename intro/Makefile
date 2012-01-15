@@ -2,11 +2,12 @@ VPATH = ../lib
 CC = gcc
 CPPFLAGS = -I../lib
 TARGET = daytimetcpcli daytimetcpsrv \
-	byteorder
+	byteorder daytimetcpsrv1
 OBJECTS = error.o daytimetcpcli.o daytimetcpsrv.o \
-	byteorder.o
+	byteorder.o daytimetcpsrv1.o
 
-all: daytimetcpcli daytimetcpsrv byteorder
+all: daytimetcpcli daytimetcpsrv \
+     byteorder daytimetcpsrv1
 
 clean:
 	$(RM) $(OBJECTS)
@@ -22,3 +23,6 @@ daytimetcpsrv.o: error.h
 
 byteorder: byteorder.o error.o
 byteorder.o: error.h
+
+daytimetcpsrv1: daytimetcpsrv1.o error.o
+daytimetcpsrv1.o: error.h

@@ -1,4 +1,5 @@
 intro/daytimetcpsrv
+intro/daytimetcpsrv[0-9]
 intro/daytimetcpcli
 intro/byteorder
 *.[oa]
